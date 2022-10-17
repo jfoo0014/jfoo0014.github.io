@@ -14,7 +14,7 @@
             "step": 1,
             "name": "Year: "
         }
-    }],        
+    }],         
     "projection": {"type": "equalEarth"},
     "transform": [
         {

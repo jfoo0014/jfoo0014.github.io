@@ -4,6 +4,13 @@
     "height":400,
     "params": [
         {
+        "name": "valcheck",
+        "value": 0,
+        "bind": {
+            "input": "checkbox",
+            "name": "Activate Value Slider: "
+        }},
+        {
         "name": "val",
         "value": 1,
         "bind": {
@@ -13,16 +20,34 @@
             "step": 0.25,
             "name": "Value < "
         }
-    }],
+    },        {
+        "name": "yearcheck",
+        "value": 0,
+        "bind": {
+            "input": "checkbox",
+            "name": "Activate Year Slider: "
+        }},
+    {
+        "name": "year",
+        "value": 1991,
+        "bind": {
+            "input": "range",
+            "min": 1991,
+            "max": 2017,
+            "step": 1,
+            "name": "Year: "
+        }}
+    ],
     "title":"Life Expectancy vs Internet Usage",       
     "projection": {"type": "equalEarth"},
     "data": {
         "url": "https://raw.githubusercontent.com/jfoo0014/jfoo0014.github.io/main/datavis2.csv"},
     "transform": [
         {"calculate": "datum.LifeExpectancy / datum.InternetUsage", "as": "LifeExpectancyperInternet"},
-        {"filter": "datum.LifeExpectancyperInternet < val"},
         {"filter": "datum.LifeExpectancyperInternet != 0"},
-        {"filter": "datum.InternetUsage > 1"}
+        {"filter": "datum.InternetUsage > 1"},
+        {"filter": "if(yearcheck,datum.Year == year, datum.Year != 0)"},
+        {"filter": "if(valcheck,datum.LifeExpectancyperInternet < val, datum.LifeExpectancyperInternet != 0)"}
     ],
     "mark": {"type":"point"},
     "encoding":{
@@ -35,6 +60,5 @@
             "scale": {"scheme": {"name": "inferno"}}
         },
         "tooltip": [{"field": "Entity", "title": "Country"},{"field": "LifeExpectancyperInternet"},{"field": "Year"}]
-    },
-    "config": {"background": "null"}
+    }
 }

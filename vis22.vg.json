@@ -36,10 +36,9 @@
             "field": "LifeExpectancy",
             "type": "quantitative",
             "title": "Life Expectancy at Birth",
-            "scale": {"scheme": {"name": "inferno"}}
+            "scale": {"scheme": {"name": "inferno"}, "domain":[30,90]}
         },
         "tooltip": [{"field": "geo.properties.NAME", "title": "Country"},{"field": "LifeExpectancy"}]
     }
-    }],
-    "config": {"background": "null"}
+    }]
 }

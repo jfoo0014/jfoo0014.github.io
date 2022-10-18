@@ -40,5 +40,4 @@
         },
         "tooltip": [{"field": "geo.properties.NAME", "title": "Country"},{"field": "InternetUsage"}]
     }
-    }],
-"config": {"background": "null"}}
+    }]}

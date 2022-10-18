@@ -33,11 +33,11 @@
     "encoding":{
         "shape": {"field": "geo", "type": "geojson"},
         "color":{
-            "field": "Internet Usage",
+            "field": "Life Expectancy",
             "type": "quantitative",
-            "title": "Internet Usage (% of Population)"
+            "title": "Life Expectancy at Birth"
         },
-        "tooltip": [{"field": "geo.properties.NAME", "title": "Country"},{"field": "Internet Usage"}]
+        "tooltip": [{"field": "geo.properties.NAME", "title": "Country"},{"field": "Life Expectancy"}]
     }
     }]
 }

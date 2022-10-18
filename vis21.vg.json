@@ -1,6 +1,5 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Chart",
     "width":600,
     "height":300,
     "params": [
@@ -10,12 +9,13 @@
         "bind": {
             "input": "range",
             "min": 1990,
-            "max": 2019,
+            "max": 2017,
             "step": 1,
             "name": "Year: "
         }
     }], 
-    "layer":[ {       
+    "layer":[{
+    "title":"Life Expectancy Over Time",       
     "projection": {"type": "equalEarth"},
     "data": {
         "url": "https://raw.githubusercontent.com/jfoo0014/jfoo0014.github.io/main/datavis2.csv"},
@@ -34,7 +34,8 @@
         "shape": {"field": "geo", "type": "geojson"},
         "color":{
             "field": "Internet Usage",
-            "type": "quantitative"
+            "type": "quantitative",
+            "title": "Internet Usage (% of Population)"
         },
         "tooltip": [{"field": "geo.properties.NAME", "title": "Country"},{"field": "Internet Usage"}]
     }

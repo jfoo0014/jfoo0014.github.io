@@ -1,0 +1,43 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width":600,
+    "height":300,
+    "params": [
+        {
+        "name": "year",
+        "value": 1990,
+        "bind": {
+            "input": "range",
+            "min": 1990,
+            "max": 2017,
+            "step": 1,
+            "name": "Year: "
+        }
+    }], 
+    "layer":[{
+    "title":"Life Expectancy Over Time",       
+    "projection": {"type": "equalEarth"},
+    "data": {
+        "url": "https://raw.githubusercontent.com/jfoo0014/jfoo0014.github.io/main/datavis2.csv"},
+    "transform": [
+        {
+        "lookup": "Code",
+        "from": {
+            "data":{"url": "https://raw.githubusercontent.com/jfoo0014/jfoo0014.github.io/main/ne_110m_admin_0_countries.topojson",
+                "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}},
+            "key": "properties.ISO_A3"
+        }, "as": "geo"
+        }, {"filter": "datum.Year == year"}
+    ],
+    "mark": {"type":"geoshape"},
+    "encoding":{
+        "shape": {"field": "geo", "type": "geojson"},
+        "color":{
+            "field": "Internet Usage",
+            "type": "quantitative",
+            "title": "Internet Usage (% of Population)"
+        },
+        "tooltip": [{"field": "geo.properties.NAME", "title": "Country"},{"field": "Internet Usage"}]
+    }
+    }]
+}

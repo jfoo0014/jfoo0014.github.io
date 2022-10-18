@@ -18,8 +18,13 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
         
-    <script src="https://raw.githubusercontent.com/jfoo0014/jfoo0014.github.io/main/vis2.js"></script>
-
+    <!--<script src="https://raw.githubusercontent.com/jfoo0014/jfoo0014.github.io/main/vis2.js"></script>-->
+    <script type="text/javascript">
+        var vega1 = 'https://raw.githubusercontent.com/jfoo0014/jfoo0014.github.io/main/vis21.vg.json';
+        vegaEmbed('#chart1', vega1).then(function(result){}).catch(console.error);
+        var vega2 = 'https://raw.githubusercontent.com/jfoo0014/jfoo0014.github.io/main/vis22.vg.json';
+        vegaEmbed('#chart2', vega2).then(function(result){}).catch(console.error);
+    </script>
     <title>Data Visualisation 2</title>
 </head>
 <body>

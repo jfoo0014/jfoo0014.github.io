@@ -15,7 +15,7 @@
         }
     }], 
     "layer":[{
-    "title":"Life Expectancy Over Time",       
+    "title":"Internet Penetration Over TIme",       
     "projection": {"type": "equalEarth"},
     "data": {
         "url": "https://raw.githubusercontent.com/jfoo0014/jfoo0014.github.io/main/datavis2.csv"},

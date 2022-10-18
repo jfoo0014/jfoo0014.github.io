@@ -7,17 +7,18 @@
     "data": {
         "url": "https://raw.githubusercontent.com/jfoo0014/jfoo0014.github.io/main/datavis2.csv"},
     "transform": [
-        {"calculate": "datum.LifeExpectancy", "as": "Life Expectancy per Internet"}
+        {"calculate": "datum.LifeExpectancy / datum.InternetUsage", "as": "Life Expectancy per Internet"}
     ],
     "mark": {"type":"point"},
     "encoding":{
         "x":{"field": "InternetUsage", "type": "quantitative"},
         "y":{"field": "LifeExpectancy", "type": "quantitative"},
         "color":{
-            "field": "LifeExpectancy",
+            "field": "Life Expectancy per Internet",
             "type": "quantitative",
-            "title": "Life Expectancy at Birth"
+            "title": "Life Expectancy per Percentage of Internet Penetration",
+            "scale": {"type": "log"}
         },
-        "tooltip": [{"field": "Entity", "title": "Country"},{"field": "LifeExpectancy"}]
+        "tooltip": [{"field": "Entity", "title": "Country"},{"field": "Life Expectancy per Internet"}]
     }
 }

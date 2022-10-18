@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width":600,
-    "height":300,
+    "width":800,
+    "height":400,
     "params": [
         {
         "name": "year",
@@ -36,9 +36,10 @@
             "field": "LifeExpectancy",
             "type": "quantitative",
             "title": "Life Expectancy at Birth",
-            "scale": {"scheme": {"name": "category10"}}
+            "scale": {"scheme": {"name": "inferno"}}
         },
         "tooltip": [{"field": "geo.properties.NAME", "title": "Country"},{"field": "LifeExpectancy"}]
     }
-    }]
+    }],
+    "config": {"background": "null"}
 }

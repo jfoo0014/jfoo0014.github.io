@@ -35,7 +35,8 @@
         "color":{
             "field": "InternetUsage",
             "type": "quantitative",
-            "title": "Internet Usage (% of Population)"
+            "title": "Internet Usage (% of Population)",
+            "scale": {"scheme": {"name": "category10"}}
         },
         "tooltip": [{"field": "geo.properties.NAME", "title": "Country"},{"field": "InternetUsage"}]
     }

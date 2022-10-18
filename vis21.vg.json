@@ -33,11 +33,11 @@
     "encoding":{
         "shape": {"field": "geo", "type": "geojson"},
         "color":{
-            "field": "Internet Usage",
+            "field": "InternetUsage",
             "type": "quantitative",
             "title": "Internet Usage (% of Population)"
         },
-        "tooltip": [{"field": "geo.properties.NAME", "title": "Country"},{"field": "Internet Usage"}]
+        "tooltip": [{"field": "geo.properties.NAME", "title": "Country"},{"field": "InternetUsage"}]
     }
     }]
 }

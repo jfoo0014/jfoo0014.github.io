@@ -1,16 +1,30 @@
 <!DOCTYPE html>
+<style>
+    body *{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.page {
+    width: 850px;
+    background-color: white;
+    margin: auto;
+    padding: 50px;
+    padding-top: 35px;
+}
+h1 {text-align: center;}
+</style>
 
 <html lang="en">
 
-
 <head>
 
-    <meta charset="UTF-8">
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
 
@@ -18,7 +32,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
         
-    <!--<script src="https://raw.githubusercontent.com/jfoo0014/jfoo0014.github.io/main/vis2.js"></script>-->
     <script type="text/javascript">
         var vega1 = 'https://raw.githubusercontent.com/jfoo0014/jfoo0014.github.io/main/vis21.vg.json';
         vegaEmbed('#chart1', vega1).then(function(result){}).catch(console.error);
@@ -28,7 +41,9 @@
     <title>Data Visualisation 2</title>
 </head>
 <body>
+    <div style = "margin: 0 auto";>
     <h1>Chart</h1>
+    </div>
     <div id="chart1">
     </div>
     <h1></h1>
